@@ -186,7 +186,7 @@ static int do_dir(const char *dname, const char *profile)
 #ifdef _MSC_VER
 	const size_t wildcardlen = strlen(dname) + 3;
 	char *wildcard = (char *) alloca(wildcardlen);
-	SDL_snprintf(wildcard, wildcardlen, "%s\\*", dname);
+	snprintf(wildcard, wildcardlen, "%s\\*", dname);
 
     WIN32_FIND_DATAA dent;
     HANDLE dirp = FindFirstFileA(wildcard, &dent);
