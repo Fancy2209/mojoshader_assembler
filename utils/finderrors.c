@@ -30,7 +30,6 @@ static void *lookup(const char *fnname, void *unused)
 #define WIN32_LEAN_AND_MEAN 1
 #include <windows.h>
 #include <malloc.h>  // for alloca().
-#include <SDL2/SDL.h>
 #define snprintf SDL_snprintf
 #else
 #include <dirent.h>
