@@ -17,7 +17,7 @@
 #include "mojoshader_assembler.h"
 
 #if FINDERRORS_COMPILE_SHADERS || defined(_MSC_VER)
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #endif
 
 #if FINDERRORS_COMPILE_SHADERS
