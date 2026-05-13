@@ -16,8 +16,11 @@
 
 #include "mojoshader_assembler.h"
 
-#if FINDERRORS_COMPILE_SHADERS
+#if FINDERRORS_COMPILE_SHADERS || defined(_MSC_VER)
 #include "SDL.h"
+#endif
+
+#if FINDERRORS_COMPILE_SHADERS
 static SDL_Window *sdlwindow = NULL;
 static void *lookup(const char *fnname, void *unused)
 {
